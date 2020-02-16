@@ -43,6 +43,14 @@
         </dependency>
     </dependencies>
     <build>
+
+        <extensions>
+            <extension>
+                <groupId>io.packagecloud.maven.wagon</groupId>
+                <artifactId>maven-packagecloud-wagon</artifactId>
+                <version>0.0.4</version>
+            </extension>
+        </extensions>
     <plugins>
     <plugin>
     <groupId>org.apache.maven.plugins</groupId>
@@ -61,6 +69,7 @@
             <groupId>org.jsonschema2pojo</groupId>
             <artifactId>jsonschema2pojo-maven-plugin</artifactId>
             <version>1.0.1</version>
+
             <configuration>
                 <sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
                 <targetPackage>com.example.types</targetPackage>
@@ -73,6 +82,12 @@
                 </execution>
             </executions>
         </plugin>
+
     </plugins>
+
+
+
+
+
     </build>
 </project>
