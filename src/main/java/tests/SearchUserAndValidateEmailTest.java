@@ -21,8 +21,10 @@ public class SearchUserAndValidateEmailTest {
 
        List<String> jsonResponse = response.jsonPath().getList("username");
        List<String> jsonResponse1 = response.jsonPath().getList("id");
-       System.out.println(jsonResponse.subList(0,10));
-       System.out.println(jsonResponse1.subList(0,10));
+       List<String> jsonResponse2 = response.jsonPath().getList("name");
+       System.out.println(jsonResponse);
+       System.out.println(jsonResponse1);
+       System.out.println(jsonResponse2);
 
         Response response1 = Headers.GetHeader("https://jsonplaceholder.typicode.com/users?id=3");
         softAssert.assertTrue(String.valueOf(response1.getStatusCode()).equals("200"));
